@@ -14,15 +14,22 @@ with open (election_csv, encoding='utf =8') as csvfile:
         if Total_rows == 0:
             Total_rows += 1
         else:
-            Total_votes = Total_votes + 1 
+            Total_votes += 1 
         Total_rows += 1
-        
-        
-
+        if row[2] == "Khan":
+            Khan_votes +=1
+        elif row[2] == "Correy":
+            Correy_votes +=1
+        elif row[2] == "Li":
+            Li_votes +=1
+        elif row [2] == "O'Tooley":
+            OTooley_votes +=1
     
-        
-
-            
-
+    Khan_percent = (Khan_votes/Total_votes)*100
     print (Total_votes)
+    print(OTooley_votes)
+    print (Khan_votes)
+    print (Correy_votes)
+    print (Li_votes)
+    print (Khan_percent)
    
