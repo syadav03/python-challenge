@@ -10,7 +10,7 @@ with open (election_csv, encoding='utf =8') as csvfile:
     Candidate = {}
     Highest_vote = 0
     Winner = " "
-    next(csvreader)
+    #next(csvreader)
 #     for col in csvreader:
 # # calculating  total votes 
 #         #Total_votes += 1 
@@ -108,4 +108,6 @@ with open (election_csv, encoding='utf =8') as csvfile:
 
 
 
-   
+    election_file = open("analysis/election_results.txt", "w")  
+    election_file.write(output) 
+    election_file.close()
