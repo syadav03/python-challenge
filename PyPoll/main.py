@@ -63,6 +63,7 @@ with open (election_csv, encoding='utf =8') as csvfile:
          else:
              Total_votes += 1 
          Total_rows += 1
+         # Counting the Votes of each Candidate 
          if row[2] == "Khan":
              Khan_votes +=1
          elif row[2] == "Correy":
@@ -72,6 +73,7 @@ with open (election_csv, encoding='utf =8') as csvfile:
          elif row [2] == "O'Tooley":
              OTooley_votes +=1
     Highest_vote = max(Khan_votes,Correy_votes,Li_votes,OTooley_votes)
+    # How to firgure out the winner 
     if Highest_vote == Khan_votes:
          Winner = "Khan"
     elif Highest_vote == Correy_votes:
@@ -92,7 +94,7 @@ with open (election_csv, encoding='utf =8') as csvfile:
     # print (Li_votes)
     # print (Khan_percent)
     # print (Winner)
-
+# Final Result printed 
     output = (f"Election Results\n"
             f"----------------------------------\n"
             f"Total Votes: {Total_votes}\n"
